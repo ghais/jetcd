@@ -27,7 +27,6 @@ public class EtcdResult {
   static class Node {
 
     String key;
-    String prevValue;
     String value;
     boolean dir;
     Date expiration;
@@ -39,10 +38,6 @@ public class EtcdResult {
 
   public String getKey() {
     return node.key;
-  }
-
-  public String getPrevValue() {
-    return node.prevValue;
   }
 
   public String getValue() {

@@ -38,22 +38,18 @@ public class SmokeTest {
     result = this.client.set(key, "hello");
     assertEquals("set", result.action);
     assertEquals("hello", result.node.value);
-    assertEquals(null, result.node.prevValue);
 
     result = this.client.get(key);
     assertEquals("get", result.action);
     assertEquals("hello", result.node.value);
-    assertEquals(null, result.node.prevValue);
 
     result = this.client.set(key, "world");
     assertEquals("set", result.action);
     assertEquals("world", result.node.value);
-    assertEquals("hello", result.node.prevValue);
 
     result = this.client.get(key);
     assertEquals("get", result.action);
     assertEquals("world", result.node.value);
-    assertEquals(null, result.node.prevValue);
   }
 
   @Test
@@ -83,7 +79,6 @@ public class SmokeTest {
     result = this.client.delete(key);
     assertEquals("delete", result.action);
     assertEquals(null, result.node.value);
-    assertEquals("hello", result.node.prevValue);
 
     try {
       this.client.get(key);
