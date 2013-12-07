@@ -1,8 +1,14 @@
 jetcd: Java binding for etcd v2 api
 ===================================
-[![Build Status](https://travis-ci.org/ghais/jetcd.png)](https://travis-ci.org/ghais/jetcd)
-
 A simple Java client library for the awesome [etcd] (https://github.com/coreos/etcd) V2 api.
+
+Requirements
+-----------------
+Java 7: To support RFC 3339 timestamps which are used by Go/Etcd
+Go 1.2: The timestamp json representation in Go 1.2 have nano second precession in G 1.1 it was
+mill second precision. The current parsing assumes nano second precision.
+
+I plan to address those 2 issues soon.
 
 Usage
 -----
