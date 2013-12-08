@@ -1,5 +1,8 @@
 jetcd: Java binding for etcd v2 api
 ===================================
+
+[![Build Status](https://travis-ci.org/ghais/jetcd.png?branch=master)](https://travis-ci.org/ghais/jetcd)
+
 A simple Java client library for the awesome [etcd] (https://github.com/coreos/etcd) V2 api.
 
 Requirements
